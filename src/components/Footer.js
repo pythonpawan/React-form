@@ -1,10 +1,10 @@
-<!--import React from 'react'
+import React from 'react'
 
 export default function Footer() {
     return (
         <div>
 
-            <footer className="page-footer font-small unique-color-dark pt-4">
+            <footer className="page-footer font-small unique-color-light pt-4">
 
 
                 <div className="container">
