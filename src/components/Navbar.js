@@ -1,10 +1,10 @@
 import React from 'react'
 
- function Navbar() {
+ function Navbar(props) {
     return (
         <div>
             <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
   <div className="container-fluid">
     <a className="navbar-brand" href="/"><h1>Narrations</h1></a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +21,15 @@ import React from 'react'
      
         
       </ul>
-      <form className="d-flex">
+     {/*<form className="d-flex">
         <input className="form-control me-2" t0ype="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">search</button>
-      </form>
+      </form>*/}
+      <div className={`form-check form-switch text-${props.mode=== 'light'?'dark':'light'}`}>
+  <input className="form-check-input" onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckDefault"/>
+  <label className="form-check-label" for="flexSwitchCheckDefault">{props.mode}</label>
+</div>
+l
     </div>
   </div>
 </nav>

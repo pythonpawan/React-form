@@ -1,12 +1,22 @@
 import Navbar from './components/Navbar';
 import Text from './components/Text';
 import About from './components/About';
-import React from 'react'
+import React , {useState}from 'react';
 
 function App() {
+  const [mode, setMode] = useState('dark');
+
+ const  toggleMode= ()=>{
+    if(mode === 'light'){
+      setMode('dark');
+    }
+    else{
+      setMode('light');
+    }
+  }
   return (
     <>
-      <Navbar />
+      <Navbar  title="Narration" mode={mode} toggleMode={toggleMode}/>
       <div className="container">
       <About/>
      <Text heading="Enter the text analyze below"/> 
